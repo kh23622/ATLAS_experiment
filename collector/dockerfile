@@ -1,0 +1,15 @@
+# Use the official Python image as a base image
+FROM python:3.9
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the Python scripts and requirements file into the container
+COPY hzz-collector.py infofile.py /app/
+
+# Install any dependencies specified in requirements.txt
+RUN pip install numpy matplotlib uproot awkward
+
+
+# Command to run the plotting script when the container starts
+CMD ["python","-u", "hzz-collector.py"]
