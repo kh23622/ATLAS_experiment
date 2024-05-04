@@ -11,3 +11,5 @@ docker run -d --name hzz-counter counter-image python hzz-counter.py
 #### Collector script
 docker run -d --name hzz-collector collector-image python hzz-collector.py
 
+### Running Container together for result
+$ docker run -d --name hzz_containers.sh <number divisions>
